@@ -1,0 +1,37 @@
+{% extends 'courses/base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <h1>select a membership</h1>
+    <div class="row">
+        {% for object in object_list %}
+    <div class="col-sm-4 col-md-4">
+        <h2>{{ object.membership_type }}</h2>
+        <P>Price: ${{object.monthly_price }}<small>/month</small></P>
+        <h4>Included Courses</h4>
+        <ul>
+            {% for courses in object.course_set.all %}
+                <li>{{ courses.title }}</li>
+            {% endfor %}
+
+        </ul>
+<form method="POST" action="{% url 'memberships:select' %}">
+    {% csrf_token %}
+    {% if object.membership_type != current_membership %}
+    <button class="btn btn-primary">Select</button>
+    {% else %}
+    <small>This is your current membership</small>
+    {% endif %}
+    <input type="hidden" name="membership_type" value="{{object.membership_type}}">
+
+</form>
+    </div>
+       
+        {% endfor %}
+    </div>
+</div>
+
+
+
+{% endblock content %}

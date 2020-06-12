@@ -1,0 +1,58 @@
+{% extends 'courses/base.html' %}
+{% block content %}
+<head>
+    <title>Saas</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+  <div class="container">
+      <H2>Kindly select from our plans below:</H2>
+      
+      <div class="row">
+          <div class="col-sm-4"><h3>Quaterly</h3>
+              <h2>$90</h2>
+              <span>Per month</span>
+              <li>3 Days of the week</li>
+              <li>Access to three videos</li>
+              <li>Access to our debugging tool</li>
+              
+              <a href="/memberships">
+                <button type="button" class="btn btn-warning">Buy Now</button>
+              </a></div>
+          <div class="col-sm-4"><h3>Half Yearly</h3>
+              <h2>$80</h2>
+              <span>Per month</span>
+              <ul class="">
+                  <li>4 days of the week</li>
+                  <li>Access to 5 videos</li>
+                  <li>Access to our debugging tool</li>
+                  <li>Access to a tutor </li>
+                  <li>Bonus video</li>
+              </ul>
+              <a href="/memberships">
+                <button type="button" class="btn btn-warning">Buy Now</button>
+              </a></div>
+          <div class="col-sm-4"><h3>Yearly</h3>
+              <h2>$70</h2>
+              <span>Per month</span>
+              <ul class="price_content">
+                <li>4 days of the week</li>
+                <li>Access to 5 videos</li>
+                <li>Access to our debugging tool</li>
+                <li>Access to a tutor </li>
+                <li>Bonus video</li>
+                <li>Classroom Access</li>
+                <li>Free extra lessons</li>
+              </ul>
+              <a href="/memberships">
+                <button type="button" class="btn btn-warning">Buy Now</button>
+              </a>
+              </div>
+      </div>
+        </div> 
+    
+{% endblock content %}
